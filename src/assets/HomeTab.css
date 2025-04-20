@@ -1,0 +1,8 @@
+/* 슬라이드 내부 콘텐츠 (예: HomeTab, CourseTab, SaveTab 등) */
+.HomeTab {
+  width: 100%;
+  max-width: 390px; /* 아이폰 14 기준 */
+  margin: 0 auto;
+  padding: 16px 0;
+  box-sizing: border-box;
+}

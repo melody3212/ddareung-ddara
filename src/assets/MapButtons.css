@@ -1,0 +1,50 @@
+/* src/assets/MapButtons.css */
+
+/* 전체 버튼 그룹을 감싸는 컨테이너 */
+.MapButtons {
+  position: absolute;
+  right: 16px;
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 버튼 간격 */
+  z-index: 10;
+}
+
+/* 따릉이 마커 토글 버튼 */
+.MapButtons-station:hover {
+  background-color: #f0f0f0;
+}
+
+.MapButtons-station.active {
+  background-color: #35d357; 
+  border: none;
+  color: white;
+}
+
+.MapButtons-station.active svg {
+  color: white;
+}
+
+
+/* 내 위치 이동 버튼 */
+.MapButtons-location:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* 도로 마커 토글 버튼 */
+.MapButtons-bikeroad:hover {
+  background-color: #f0f0f0;
+}
+
+.MapButtons-bikeroad.active {
+  background-color: #35d357; 
+  border: none;
+  color: white;
+}
+
+.MapButtons-bikeroad.active svg {
+  color: white;
+}

@@ -1,0 +1,27 @@
+
+.MapPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* 지도 → 슬라이드 순 */
+}
+
+.MapPage__SlideWrapper {
+  position: absolute;
+  bottom: 60px; /* BottomNav 위로 슬라이드 띄우기 */
+  width: 100%;
+  z-index: 10;
+}
+
+
+.MapPageButton.location {
+  position: absolute;
+  right: 16px;
+  bottom: 120px;
+}
+
+.MapPageButton.station {
+  position: absolute;
+  right: 16px;
+  bottom: 64px;
+}

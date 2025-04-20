@@ -1,0 +1,123 @@
+/* 날씨 요약 박스 */
+.WeatherBox {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 16px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 17px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  color: #333;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* 상단 위치 텍스트 */
+.WeatherBox_location {
+  font-weight: 600;
+  font-size: 20px;
+  color: #353535;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+/* 내부 정보 배치 (좌/우) */
+.WeatherBox_main {
+  display: flex;
+  justify-content:space-between; /*좌우로 배치*/
+}
+
+/* 왼쪽: 날씨 아이콘 + 현재온도 ++ 날씨요약 */
+.WeatherBox_left {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 14px;
+  color: #353535;
+  align-items: center;
+  margin-left: 10px;
+}
+.WeatherBox_it{
+  display: flex;
+  margin-bottom: 2px;
+}
+
+/* 날씨 아이콘 (이모티콘) */
+.WeatherBox_emoji {
+  font-size: 60px;
+
+}
+
+/* 현재 기온 숫자 */
+.WeatherBox_temp {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* 간단한 날씨 설명 */
+.WeatherBox_desc {
+  font-size: 14px;
+  color: #444;
+  margin-top: 0px;
+}
+
+
+/* 오른쪽: 체감온도, 미세먼지 */
+.WeatherBox_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.WeatherBox_right >p{
+  margin:5px;
+}
+
+
+
+
+
+
+/* 시간대별 날씨 컨테이너 */
+.WeatherBox_hourly {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* 개별 시간 날씨 카드 */
+.WeatherBox_hourly .HourlyWeather_item {
+  flex-shrink: 0;
+  min-width: 64px;
+  scroll-snap-align: start;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+
+.HourlyWeather_emoji {
+  font-size: 24px;
+  margin: 6px 0;
+}
+
+
