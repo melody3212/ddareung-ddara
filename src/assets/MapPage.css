@@ -29,3 +29,57 @@
 .MapPage.img {
   border-radius: 20px;
 }
+
+/*인포 디자인*/
+.BikeStationinfo-window {
+  position: relative;          /* 화살표(꼬리) 줄 때 필요 */
+  background-color: #c6ffdc;   /* 배경색 */
+
+  padding: 8px 12px;           /* 안쪽 여백 */
+  border-radius: 8px;          /* 둥근 모서리 */
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.25); /* 그림자 */
+  font-size: 11px;             /* 텍스트 크기 */
+  color: #333;                 /* 글자색 */
+
+  /* 👉 너비/높이 조절 */
+  width: auto;
+  min-width: 120px;                /* 고정 너비 */
+  max-width: 250px;            /* 최대 너비 유지 */
+  height: auto;                /* 내용에 따라 높이 자동 */
+  max-height: 100px;           /* 필요 시 최대 높이 제한 */
+
+
+  word-break: break-word;      /* 긴 단어 줄바꿈 */
+  transform: translateX(-50%); /* 마커 중앙 맞추기 */
+  left: 50%;                   /* 마커 기준 정렬 */
+  white-space: normal;         /* 여러 줄 허용 */
+  /* 필요하면 z-index 추가 */
+
+  border: #c6ffdc;
+}
+
+.BikeStationinfo-window .h4{
+  font-size: 10px;
+}
+
+/* 옵션: 정보창 아래에 꼬리(삼각형) 만들기 */
+.BikeStationinfo-window::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;    /* 정보창 바로 아래 */
+  left: 50%;       /* 가운데 정렬 */
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #c6ffdc transparent transparent transparent;
+}
+
+/* 제목과 본문 마진 조절 */
+.BikeStationinfo-window h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+.BikeStationinfo-window p {
+  margin: 0;
+  font-size: 13px;
+}
