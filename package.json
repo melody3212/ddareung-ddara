@@ -1,0 +1,14 @@
+{
+    "name": "ddareung-ddara-monorepo",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "cd backend && .\\venv\\Scripts\\python -m uvicorn main:app --reload",
+        "dev:frontend": "cd frontend && npm run dev"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}

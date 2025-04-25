@@ -2,6 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import MapPage from "../pages/MapPage";
 import RecordPage from "../pages/RecordPage";
 import MyPage from "../pages/MyPage";
+import LoginPage from '../pages/LoginPage';
+import SignupForm from "../components/SignupForm";
+
 
 const AppRouter = ({ currentIndex, setCurrentIndex }) => {
   return (
@@ -16,6 +19,9 @@ const AppRouter = ({ currentIndex, setCurrentIndex }) => {
       />
       <Route path="/record" element={<RecordPage />} />
       <Route path="/mypage" element={<MyPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupForm />} />
+
     </Routes>
   );
 };
