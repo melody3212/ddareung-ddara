@@ -4,7 +4,7 @@ from pydantic import BaseModel, EmailStr
 
 class UserCreate(BaseModel):
     username: str
-    email: EmailStr
+    email: EmailStr  # 이메일 형식 자동 검증
     password: str
 
 class UserOut(BaseModel):
