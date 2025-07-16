@@ -3,4 +3,9 @@
     overflow: hidden;
     position: relative;
   }
-  
+  /* 전역 CSS */
+#map {
+  /* 채도를 30%만큼 낮추고, 밝기도 살짝 조절 */
+  filter: saturate(30%) brightness(90%);
+}
+

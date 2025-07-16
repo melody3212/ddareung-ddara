@@ -1,5 +1,6 @@
-# DB 연결 설정 -> SQLAlchemy 엔진/세션/베이스 설정
-
+# DB 연결 설정 -> SQLAlchemy을 사용하여 SQLite 데베와 연결,
+#  엔진/세션/베이스 설정
+# 컴퓨터 안에 test.db 파일을 만들고, 그 파일과 대화를 주고받을 준비를 함 
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base

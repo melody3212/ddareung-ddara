@@ -1,6 +1,6 @@
-# 토큰 만들고 검증하는 함수 ← JWT 토큰 생성·검증 로직
-
 # jwt_utils.py
+# 토큰 만들고 검증하는 함수 ← JWT 토큰 생성·검증 로직
+# 로그인에 성공하면 짧은 문자열(토큰)을 만들어 주고, 보호된 페이지는 이 토큰을 풀어 확인함
 
 from datetime import datetime, timedelta
 from jose import jwt, JWTError

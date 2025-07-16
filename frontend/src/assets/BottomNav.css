@@ -8,3 +8,8 @@
   align-items: center;
 
 }
+
+/* BottomNav.css */
+.BottomNav .active {
+  color: #000000;
+}

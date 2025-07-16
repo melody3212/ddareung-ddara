@@ -18,7 +18,7 @@
 }
 
 .MapButtons-station.active {
-  background-color: #35d357; 
+  background-color: #3b974fe0; 
   border: none;
   color: white;
 }
@@ -40,7 +40,7 @@
 }
 
 .MapButtons-bikeroad.active {
-  background-color: #35d357; 
+  background-color: #3b974fe0; 
   border: none;
   color: white;
 }

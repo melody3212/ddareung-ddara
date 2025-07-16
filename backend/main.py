@@ -1,9 +1,12 @@
 # backend/main.py
-
+# DB에 테이블이 없으면 만든 뒤, 
+# /signup, /login, /me 등 주소를 만들어 회원 가입, 로그인(토큰 발급) 등을 함
 from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware  #react에서 자유롭게 호출 가능능
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
+from typing import List
+
 
 import database
 import models
@@ -71,6 +74,7 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(),
     access_token = jwt_utils.create_access_token({"sub": db_user.username})
     return {"access_token": access_token, "token_type": "bearer"}
 
+
 # 8) 보호된 API 예시: 내 정보 조회
 @app.get("/me", response_model=schemas.UserOut)
 def read_me(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
@@ -83,3 +87,10 @@ def read_me(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     # 8.2) DB에서 사용자 조회
     db_user = db.query(models.User).filter(models.User.username == username).first()
     return db_user
+
+
+# 9. 추천 코스 엔드포인트
+@app.get("/courses/recommended", response_model=List[schemas.CourseOut])
+def get_recommended_courses(db: Session = Depends(get_db)):
+    # 임시: 모든 코스 반환
+    return db.query(models.Course).all()
