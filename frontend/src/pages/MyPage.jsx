@@ -22,7 +22,7 @@ export default function MyPage() {
             fontSize: 18,
             borderRadius: 8
           }}
-          onClick={() => nav("/login")}
+          onClick={() => nav("/signup")}
         >
           로그인하기
         </button>
